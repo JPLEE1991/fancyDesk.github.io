@@ -76,7 +76,7 @@
 	        <div class="mb-5">
 				<h3 class="h6">Login ${loginMember.id}</h3>
 				<!-- 로그인하지 않았을 때  -->
-				<c:if test="${empty loginMember}">
+				<c:if test="${empty LOGIN_MEMBER}">
 				<form action="/user/userLogin.do" class="colorlib-subscribe-form" method="POST">
 		            <div class="form-group">
 		            	<div class="icon"><span class="icon-paper-plane"></span></div>
@@ -89,9 +89,9 @@
 	         	</form>
 	         	</c:if>
 	         	<!--로그인 했을 때-->
-	         	<c:if test="${not empty loginMember}">
+	         	<c:if test="${not empty LOGIN_MEMBER}">
 	         	
-	         		<span>${loginMember.id}님 환영합니다</span>
+	         		<span>${LOGIN_MEMBER.id}님 환영합니다</span>
 	         	</c:if>
 			</div>
 			
